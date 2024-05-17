@@ -1,0 +1,9 @@
+version: "3.8"  # Specify Docker Compose version
+
+services:
+  your-app-name:  # Replace with your app name
+    build: .       # Build the image from the current directory (Dockerfile)
+    ports:
+      - "5175:5175"  # Map container port 5173 to host port 5173
+    volumes:
+      - ./:/app:rw  # Mount your project directory as a volume for live code changes
